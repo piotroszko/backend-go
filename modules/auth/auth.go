@@ -8,6 +8,5 @@ func AddAuthGroup(g *gin.RouterGroup) {
 		auth.POST("/login", login)
 		auth.POST("/register", register)
 		auth.POST("/refresh", refresh)
-		auth.POST("/logout", logout)
 	}
 }

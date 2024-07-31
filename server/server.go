@@ -7,9 +7,11 @@ import (
 )
 
 func Init() {
-	r := gin.Default()
+
 	db.DbConnect()
 	db.DbAutoMigrate()
+
+	r := gin.Default()
 	router.AddV1Routes(r)
 
 	r.Run() // listen and serve on 0.0.0.0:8080
